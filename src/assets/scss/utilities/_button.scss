@@ -38,3 +38,14 @@
 		}
 	}
 }
+
+.more_horizontal {
+	width: 20px;
+	height: 10px;
+	background-color: transparent;
+	border: none;
+	background-image: url('../../icons/more_horiz.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}

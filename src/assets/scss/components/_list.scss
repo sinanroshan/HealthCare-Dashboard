@@ -1,0 +1,24 @@
+.list-wrapper {
+  min-height: 100%;
+  max-height: 100%;
+  width: 360px;
+  background-color: var(--unnamed-color-ffffff);
+  border-radius: 16px;
+}
+
+.list-content-wrapper {
+  max-height: calc(100% - 100px);
+  overflow: auto;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  cursor: pointer;
+
+  &.active {
+    background-color: var(--activestate_bg_2);
+  }
+}

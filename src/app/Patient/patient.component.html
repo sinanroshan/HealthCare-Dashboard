@@ -1,0 +1,34 @@
+<section class="section-wrapper d-flex">
+  <div class="list-wrapper">
+    <div class="d-flex justify-content-between align-items-center p-20">
+      <p class="card-title-24pt">Patients</p>
+      <button class="btn btn-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17.995" height="18" viewBox="0 0 17.995 18">
+          <path id="search_FILL0_wght300_GRAD0_opsz24"
+            d="M142.675-811.574a6.293,6.293,0,0,1-4.626-1.895,6.293,6.293,0,0,1-1.895-4.626,6.293,6.293,0,0,1,1.895-4.626,6.293,6.293,0,0,1,4.626-1.895,6.293,6.293,0,0,1,4.626,1.895,6.293,6.293,0,0,1,1.895,4.626,6.254,6.254,0,0,1-.383,2.182,6.1,6.1,0,0,1-1.023,1.808l6.135,6.135a.773.773,0,0,1,.227.557.754.754,0,0,1-.227.567.765.765,0,0,1-.562.232.765.765,0,0,1-.562-.232l-6.135-6.135a6.1,6.1,0,0,1-1.839,1.033,6.318,6.318,0,0,1-2.151.373Zm0-1.6a4.749,4.749,0,0,0,3.491-1.43,4.749,4.749,0,0,0,1.43-3.491,4.749,4.749,0,0,0-1.43-3.491,4.749,4.749,0,0,0-3.491-1.43,4.749,4.749,0,0,0-3.491,1.43,4.749,4.749,0,0,0-1.43,3.491,4.749,4.749,0,0,0,1.43,3.491A4.749,4.749,0,0,0,142.675-813.173Z"
+            transform="translate(-136.155 824.614)" fill="#072635" />
+        </svg>
+      </button>
+    </div>
+    <ul class="list-content-wrapper custom-scroll">
+      @for (patient of patientList; track patient.id) {
+      <li class="list-item">
+        <div class="user-box-wraper">
+          <div class="dp-box">
+            <img class="dp-icon" src="./assets/images/senior-woman-doctor.png">
+          </div>
+          <div class="user-detail">
+            <p class="body-emphasized-14pt">{{patient.name}}</p>
+            <p class="body-secondary-info-14pt">{{patient.gender}}, {{patient.age}}</p>
+          </div>
+        </div>
+        <button class="btn btn-icon "><span class="more_horizontal"></span></button>
+      </li>
+      } @empty {
+      <div>There are no items.</div>
+      }
+    </ul>
+  </div>
+
+  <router-outlet></router-outlet>
+</section>
