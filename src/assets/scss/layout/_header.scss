@@ -1,0 +1,30 @@
+.top-nav {
+  background-color: var(--unnamed-color-ffffff);
+  border-radius: 70px;
+  width: calc(100vw - 36px);
+  padding: 16px 32px;
+  margin: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .app-logo {
+    height: 48px;
+  }
+}
+
+.nav-item {
+  display: inline-flex;
+  padding: 16px;
+  cursor: pointer;
+
+  .icon {
+    margin-right: 8px;
+  }
+
+  &.active,
+  &:hover {
+    border-radius: 41px;
+    background: var(--activestate_bg_1) 0% 0% no-repeat padding-box;
+  }
+}
