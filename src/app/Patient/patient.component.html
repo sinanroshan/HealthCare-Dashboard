@@ -12,10 +12,10 @@
     </div>
     <ul class="list-content-wrapper custom-scroll">
       @for (patient of patientList; track patient.id) {
-      <li class="list-item" (click)="patientDetail(patient.id)" [ngClass]="{active: active == patient.id}">
+      <li class="list-item" (click)="patientDetail(patient)" [ngClass]="{active: active == patient}">
         <div class="user-box-wraper">
           <div class="dp-box">
-            <img class="dp-icon" src="./assets/images/senior-woman-doctor.png">
+            <img class="dp-icon" [src]="patient.profile_picture">
           </div>
           <div class="user-detail">
             <p class="body-emphasized-14pt">{{patient.name}}</p>
@@ -30,6 +30,6 @@
     </ul>
   </div>
   <div class="flex-fit">
-    <router-outlet></router-outlet>
+    <app-patient-dashboard [selectedPatient]="active"></app-patient-dashboard>
   </div>
 </section>

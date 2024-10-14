@@ -8,12 +8,12 @@ const routes: Routes = [
   {
     path: 'patient',
     component: PatientComponent,
-    children: [
-      {
-        path: ':id',
-        component: PatientDashboardComponent
-      }
-    ]
+    // children: [
+    //   {
+    //     path: ':id',
+    //     component: PatientDashboardComponent
+    //   }
+    // ]
   },
 
 ];

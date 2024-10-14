@@ -12,6 +12,11 @@
     td {
       border: 1px solid transparent;
     }
+
+    tbody {
+      max-height: 300px;
+      overflow: scroll;
+    }
   }
 
   thead tr {

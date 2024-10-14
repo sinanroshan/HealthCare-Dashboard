@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PatientService } from './services/patient.service';
 
 @Component({
   selector: 'app-patient',
@@ -8,48 +9,26 @@ import { Router } from '@angular/router';
 export class PatientComponent implements OnInit {
   active: number = 0;
 
-  constructor (private _router: Router) {
+  constructor (
+    private _router: Router,
+    private _patientService: PatientService
+  ) { }
 
-  }
-
-  patientList: any[] = [
-    {
-      id: 1,
-      name: 'Emily Williams',
-      age: 45,
-      gender: 'Female',
-      icon: '',
-    },
-    {
-      id: 2,
-      name: 'Brandon Mitchell',
-      age: 36,
-      gender: 'Male',
-      icon: '',
-    },
-    {
-      id: 3,
-      name: 'Jessica Taylor',
-      age: 28,
-      gender: 'Female',
-      icon: '',
-    },
-    {
-      id: 4,
-      name: 'Ryan Johnson',
-      age: 42,
-      gender: 'Male',
-      icon: '',
-    },
-  ]
+  patientList: any[] = [];
   ngOnInit (): void {
-    this.active = this.patientList[0].id;
-    this._router.navigate(['patient', this.patientList[0].id])
+    this.getPatientsList();
   }
 
-  patientDetail (id: number) {
-    this.active = id;
-    this._router.navigate(['patient', id])
+  getPatientsList () {
+    this._patientService.getAllPatients().subscribe(res => {
+      this.patientList = res;
+      this.active = this.patientList[0];
+    });
+  }
+
+  patientDetail (item: any) {
+    this.active = item;
+    // this._router.navigate(['patient', id])
   }
 
 }

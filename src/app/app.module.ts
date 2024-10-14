@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { PatientComponent } from './Patient/patient.component';
 import { PatientDashboardComponent } from './Patient/patient-dashboard/patient-dashboard.component';
+import { PatientService } from './Patient/services/patient.service';
+import { HttpClientModule } from '@angular/common/http';
 // import { ChartsModule } from 'ng2-charts';
 // import { NgChartsModule } from 'ng2-charts';
 
@@ -15,11 +17,12 @@ import { PatientDashboardComponent } from './Patient/patient-dashboard/patient-d
     AppComponent,
     TopNavComponent,
     PatientComponent,
-    PatientDashboardComponent
+    PatientDashboardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
     // ChartsModule
     // NgChartsModule
   ],
