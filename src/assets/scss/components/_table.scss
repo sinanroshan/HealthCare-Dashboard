@@ -1,0 +1,37 @@
+.table-wrapper {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+    text-align: left;
+
+    tr,
+    td {
+      border: 1px solid transparent;
+    }
+  }
+
+  thead tr {
+    background: #F6F7F8;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  th {
+    color: #333;
+    font-weight: bold;
+    padding: 12px;
+  }
+
+  tbody td {
+    padding: 20px 16px;
+    border-bottom: 1px solid #F6F7F8;
+  }
+
+  tbody tr:hover {
+    background-color: #f7f7f7cd;
+  }
+}

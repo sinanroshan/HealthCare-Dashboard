@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-patient',
   templateUrl: './patient.component.html',
 })
 export class PatientComponent implements OnInit {
+  active: number = 0;
 
-  constructor () {
+  constructor (private _router: Router) {
 
   }
 
@@ -41,7 +43,13 @@ export class PatientComponent implements OnInit {
     },
   ]
   ngOnInit (): void {
+    this.active = this.patientList[0].id;
+    this._router.navigate(['patient', this.patientList[0].id])
+  }
 
+  patientDetail (id: number) {
+    this.active = id;
+    this._router.navigate(['patient', id])
   }
 
 }

@@ -1,7 +1,7 @@
 <section class="section-wrapper d-flex">
-  <div class="list-wrapper">
+  <div class="list-wrapper mr-32">
     <div class="d-flex justify-content-between align-items-center p-20">
-      <p class="card-title-24pt">Patients</p>
+      <p class="card-title-24pt font-weight-600">Patients</p>
       <button class="btn btn-icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="17.995" height="18" viewBox="0 0 17.995 18">
           <path id="search_FILL0_wght300_GRAD0_opsz24"
@@ -12,7 +12,7 @@
     </div>
     <ul class="list-content-wrapper custom-scroll">
       @for (patient of patientList; track patient.id) {
-      <li class="list-item">
+      <li class="list-item" (click)="patientDetail(patient.id)" [ngClass]="{active: active == patient.id}">
         <div class="user-box-wraper">
           <div class="dp-box">
             <img class="dp-icon" src="./assets/images/senior-woman-doctor.png">
@@ -29,6 +29,7 @@
       }
     </ul>
   </div>
-
-  <router-outlet></router-outlet>
+  <div class="flex-fit">
+    <router-outlet></router-outlet>
+  </div>
 </section>

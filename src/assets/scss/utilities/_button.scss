@@ -30,12 +30,11 @@
 	}
 
 	&-primary {
-		background-color: var(--primary-dark);
-		color: var(--white);
-
-		&:hover {
-			background-color: var(--Interactive-primary-hover);
-		}
+		background-color: var(--activestate_bg_1);
+		padding: 12px 40px;
+		border-radius: 41px;
+		color: var(--unnamed-color-072635);
+		font-weight: var(--unnamed-font-weight-bold);
 	}
 }
 
@@ -45,6 +44,17 @@
 	background-color: transparent;
 	border: none;
 	background-image: url('../../icons/more_horiz.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.download-icon {
+	width: 20px;
+	height: 20px;
+	background-color: transparent;
+	border: none;
+	background-image: url('../../icons/download_icon.svg');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;

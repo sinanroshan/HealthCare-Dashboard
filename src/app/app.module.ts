@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { PatientComponent } from './Patient/patient.component';
+import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavComponent,
-    PatientComponent
+    PatientComponent,
+    PatientDashboardComponent
   ],
   imports: [
     BrowserModule,

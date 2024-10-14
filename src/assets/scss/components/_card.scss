@@ -1,0 +1,23 @@
+.card {
+  border-radius: 16px;
+  background-color: var(--unnamed-color-ffffff);
+  padding: 20px;
+}
+
+.card-wrapper {
+  .card {
+    width: auto
+  }
+}
+
+.card-bg-1 {
+  background-color: #E0F3FA;
+}
+
+.card-bg-2 {
+  background-color: #FFE6E9;
+}
+
+.card-bg-3 {
+  background-color: #FFE6F1;
+}

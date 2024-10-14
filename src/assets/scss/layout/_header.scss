@@ -26,6 +26,7 @@
 
   &.active,
   &:hover {
+    transition: 700ms;
     border-radius: 41px;
     background: var(--activestate_bg_1) 0% 0% no-repeat padding-box;
   }

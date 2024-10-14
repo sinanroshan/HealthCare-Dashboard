@@ -4,6 +4,7 @@
   width: 360px;
   background-color: var(--unnamed-color-ffffff);
   border-radius: 16px;
+  margin-left: 18px;
 }
 
 .list-content-wrapper {
@@ -18,7 +19,9 @@
   padding: 16px;
   cursor: pointer;
 
-  &.active {
+  &.active,
+  &:hover {
+    transition: 900ms;
     background-color: var(--activestate_bg_2);
   }
 }
