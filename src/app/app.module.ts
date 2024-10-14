@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { PatientComponent } from './Patient/patient.component';
 import { PatientDashboardComponent } from './Patient/patient-dashboard/patient-dashboard.component';
+// import { ChartsModule } from 'ng2-charts';
+// import { NgChartsModule } from 'ng2-charts';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +19,9 @@ import { PatientDashboardComponent } from './Patient/patient-dashboard/patient-d
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // ChartsModule
+    // NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
